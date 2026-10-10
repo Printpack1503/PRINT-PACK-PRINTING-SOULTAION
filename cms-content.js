@@ -3,7 +3,7 @@
  const get=async url=>{const r=await fetch(url,{cache:'no-store'});if(!r.ok)throw Error('Cannot load '+url);return r.json()};
  const text=(selector,value)=>{const e=document.querySelector(selector);if(e&&typeof value==='string')e.textContent=value};
  try{
-  const s=await get('data/settings.json');
+  const s=await get('data/business.json');
   text('.hero-copy h1',s.headline);text('.hero-copy > p',s.tagline);
   text('.about-grid > div:last-child p',s.about);
   text('.contact-details a:nth-child(1) strong',s.phone_display+' ↗');
@@ -15,7 +15,9 @@
   if(wa){window.printpackWhatsapp=wa;document.querySelectorAll('a[href^="https://wa.me/"]').forEach(a=>{const old=new URL(a.href);a.href='https://wa.me/'+wa+(old.search||'')})}
  }catch(e){console.warn('Business details could not be loaded:',e)}
  try{
-  const products=await get('data/products.json');if(!Array.isArray(products))return;
+  const data = await get('data/products.json');
+const products = data.products || [];
+if (!Array.isArray(products)) return;
   const shown=products.filter(p=>p&&p.featured!==false&&p.name);
   const gallery=document.getElementById('product-gallery');if(!gallery||!shown.length)return;
   gallery.replaceChildren();
