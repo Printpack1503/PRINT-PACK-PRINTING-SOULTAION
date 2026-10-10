@@ -1,0 +1,42 @@
+
+media:
+  input: assets/uploads
+  output: /assets/uploads
+
+content:
+  - name: products
+    label: Products & Gallery
+    type: file
+    path: data/products.json
+    format: json
+    fields:
+      - name: products
+        label: Products
+        type: object
+        list: true
+        fields:
+          - name: name
+            label: Product Name
+            type: string
+          - name: description
+            label: Description
+            type: text
+          - name: image
+            label: Product Photo
+            type: image
+
+  - name: business
+    label: Business Details
+    type: file
+    path: data/business.json
+    format: json
+    fields:
+      - name: phone
+        label: WhatsApp Number
+        type: string
+      - name: email
+        label: Email
+        type: string
+      - name: address
+        label: Address
+        type: string
