@@ -1,0 +1,22 @@
+PRINT PACK — FREE ADMIN PANEL SETUP (GitHub + Pages CMS + Netlify)
+
+IMPORTANT: The ZIP is ready, but login is NOT active until you connect your own GitHub account and hosting. Do not share passwords.
+
+1. https://github.com par free account banayein.
+2. New repository banayein, jaise printpack-website. Public repository easiest hai. ZIP extract karke ANDAR KI SAB FILES (index.html, .pages.yml, data/, assets/, etc.) repository ke ROOT mein upload karein. Hidden .pages.yml ko bhi upload karna zaroori hai. GitHub web upload may hide dotfiles on some systems; verify repository contains .pages.yml.
+3. https://app.netlify.com par GitHub se login karein. Add new project > Import existing project > GitHub > printpack-website repository choose karein.
+   Build command: blank. Publish directory: . (repository root). Deploy karein.
+4. https://app.pagescms.org par GitHub se sign in karein, Pages CMS GitHub App ko apni repository ke liye authorize karein. Repository select karein.
+5. Left menu: Products & Gallery > Add item (plus) > Product name, category, description, photo, Show on website=true > Save.
+6. Business Details & Homepage > phone, email, address, headline update > Save.
+7. Pages CMS changes GitHub repository mein commit karta hai. Netlify connected repository par automatically redeploy karega. Thodi der baad public website refresh karein.
+8. Product ko remove karne ke liye Products & Gallery mein item delete karein aur Save karein. Photo assets ko alag se Media mein manage kar sakte hain.
+
+NOTE: Existing Netlify Drop-only site is NOT connected to GitHub. To get automatic updates you MUST deploy from the GitHub repository as in step 3. Free plans have usage limits. CMS editing is done at app.pagescms.org, not at /admin on the public website.
+
+IMPORTANT: No customer passwords or payment details should be entered in Pages CMS. Public repo data, including business contact details and product photos, is publicly readable.
+
+YOUR CURRENT CONTACT
+WhatsApp: +91 7600012424
+Email: Printpack1503@gmail.com
+Address: placeholder until you update it.
