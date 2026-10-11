@@ -3,15 +3,16 @@
  const get=async url=>{const r=await fetch(url,{cache:'no-store'});if(!r.ok)throw Error('Cannot load '+url);return r.json()};
  const text=(selector,value)=>{const e=document.querySelector(selector);if(e&&typeof value==='string')e.textContent=value};
  try{
-  const s=await get('data/business.json');
+  const s=await get('data/settings.json');
+  const b=await get('data/business.json').catch(()=>({}));
   text('.hero-copy h1',s.headline);text('.hero-copy > p',s.tagline);
   text('.about-grid > div:last-child p',s.about);
-  text('.contact-details a:nth-child(1) strong',s.phone_display+' ↗');
-  text('.contact-details a:nth-child(2) strong',s.email+' ↗');
-  text('.contact-details > div strong',s.address);
+  text('.contact-details a:nth-child(1) strong',(b.phone||s.phone_display)+' ↗');
+  text('.contact-details a:nth-child(2) strong',(b.email||s.email)+' ↗');
+  text('.contact-details > div strong',b.address||s.address);
   if(s.business_name)document.title=s.business_name+' | Printing & Packaging';
-  if(s.email){const a=document.querySelector('.contact-details a:nth-child(2)');if(a)a.href='mailto:'+s.email}
-  const wa=String(s.whatsapp||'').replace(/\D/g,'');
+  if(b.email||s.email){const a=document.querySelector('.contact-details a:nth-child(2)');if(a)a.href='mailto:'+(b.email||s.email)}
+  const wa=String(b.phone||s.whatsapp||'').replace(/\D/g,'');
   if(wa){window.printpackWhatsapp=wa;document.querySelectorAll('a[href^="https://wa.me/"]').forEach(a=>{const old=new URL(a.href);a.href='https://wa.me/'+wa+(old.search||'')})}
  }catch(e){console.warn('Business details could not be loaded:',e)}
  try{

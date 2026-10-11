@@ -9,3 +9,38 @@
 .product-info h3{margin:10px 0;font-size:21px}
 .product-info p{font-size:14px;line-height:1.6;color:#53617a}
 .product-enquiry{display:inline-block;margin-top:12px;color:#047bb8;font-weight:700;text-decoration:none}
+
+
+/* Print Pack premium design upgrade */
+:root{--blue:#45c8ff;--navy:#071323}
+.header{background:#071425f5;backdrop-filter:blur(14px)}
+.nav{height:84px}
+.brand-logo{display:block;width:48px;height:48px;overflow:hidden;border-radius:11px;border:1px solid #426387}
+.brand-logo img{width:100%;height:100%;object-fit:cover}
+.nav nav .nav-cta,.btn.primary{background:linear-gradient(110deg,#50d1ff,#168fe4);color:#061827;border-radius:30px}
+.hero{background:radial-gradient(circle at 78% 42%,#1a436d 0%,transparent 40%),linear-gradient(120deg,#071322,#0c2340 75%,#061527)}
+.hero-grid{grid-template-columns:1fr 1fr;gap:46px;min-height:680px;padding:85px 0 100px}
+.hero h1{font-size:clamp(42px,5.2vw,70px);line-height:1.08}
+.hero-copy>p{font-size:17px}
+.hero-points span{border:1px solid #416b8a;background:#ffffff0a;padding:8px 12px;border-radius:30px}
+.btn{border-radius:30px}
+.premium-showcase{height:505px;max-width:560px;width:100%;margin-left:auto;position:relative}
+.showcase-halo{position:absolute;inset:12%;border-radius:50%;background:#188cd9;filter:blur(80px);opacity:.3}
+.showcase-main{position:absolute;right:2%;top:9%;width:84%;height:75%;padding:9px;border:1px solid #8cbde27a;border-radius:23px;background:#1a3857;box-shadow:0 25px 65px #0009;transform:rotate(3deg)}
+.showcase-main img,.showcase-secondary img{display:block;width:100%;height:100%;object-fit:cover;border-radius:15px}
+.showcase-secondary{position:absolute;left:0;bottom:7%;width:46%;height:43%;padding:7px;border:1px solid #b4d3ef99;border-radius:19px;background:#183652;box-shadow:0 20px 48px #0009;transform:rotate(-7deg)}
+.showcase-secondary img{border-radius:12px}
+.showcase-label{position:absolute;z-index:2;top:1%;left:2%;background:#f4fbff;color:#123450;padding:12px 17px;border-radius:30px;font-size:10px;letter-spacing:1px;font-weight:800;box-shadow:0 10px 30px #0005}
+.showcase-brand{position:absolute;right:0;bottom:1%;display:flex;align-items:center;gap:10px;background:white;color:#15304b;border-radius:12px;padding:8px 13px 8px 8px;box-shadow:0 12px 30px #0008;font-size:10px;letter-spacing:1px;font-weight:900}
+.showcase-brand img{width:45px;height:45px;object-fit:cover;border-radius:8px}
+.service-card,.product-card{transition:transform .2s,box-shadow .2s;border-radius:19px}
+.service-card:hover,.product-card:hover{transform:translateY(-4px);box-shadow:0 18px 38px #0b2e551c}
+.gallery{background:linear-gradient(#fff,#f2f8ff)}
+.gallery-grid:has(.product-card){grid-template-columns:repeat(3,minmax(0,1fr))}
+.product-info p{display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:4;overflow:hidden;white-space:pre-line}
+.product-enquiry{background:#eaf6ff;padding:11px 15px;border-radius:30px}
+.contact{background:linear-gradient(125deg,#081628,#112d4b)}
+.quote-form{border-radius:20px}
+@media(max-width:900px){.hero-grid{gap:24px}.premium-showcase{height:390px}}
+@media(max-width:700px){.nav{height:70px}.hero-grid{grid-template-columns:1fr;padding:60px 0 80px;gap:32px}.premium-showcase{height:365px;max-width:440px;margin:auto}.gallery-grid:has(.product-card){grid-template-columns:1fr 1fr}}
+@media(max-width:480px){.premium-showcase{height:300px}.gallery-grid:has(.product-card){grid-template-columns:1fr}.showcase-brand{font-size:8px}.showcase-brand img{width:35px;height:35px}}
