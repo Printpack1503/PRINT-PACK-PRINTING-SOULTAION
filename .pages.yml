@@ -40,3 +40,24 @@ content:
       - name: address
         label: Address
         type: string
+
+  - name: services
+    label: Services
+    type: file
+    path: data/services.json
+    format: json
+    fields:
+      - name: services
+        label: Service Cards
+        type: object
+        list: true
+        fields:
+          - name: name
+            label: Service Name
+            type: string
+          - name: description
+            label: Description
+            type: text
+          - name: image
+            label: Service Photo
+            type: image
