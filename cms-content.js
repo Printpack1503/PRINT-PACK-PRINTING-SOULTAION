@@ -36,8 +36,8 @@ if (!Array.isArray(products)) return;
    info.append(cat,name,desc,a);card.append(info);gallery.append(card);
   }
  }catch(e){console.warn('Products could not be loaded:',e)}
-})();
 
+ 
  // Load Services from Pages CMS
  try {
   const data = await get('data/services.json');
@@ -84,3 +84,4 @@ if (!Array.isArray(products)) return;
  } catch (e) {
   console.warn('Services could not be loaded:', e);
  }
+})();
