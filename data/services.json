@@ -1,35 +1,34 @@
-
 {
   "services": [
     {
       "name": "Packaging Boxes",
       "description": "Premium customized packaging boxes for your brand.",
-      "image": ""
+      "image": "/assets/uploads/WhatsApp Image 2026-10-10 at 19.39.55 (1).jpeg"
     },
     {
       "name": "Labels & Stickers",
       "description": "High-quality custom labels and stickers for all products.",
-      "image": ""
+      "image": "/assets/uploads/Sticker-Pages-03_720-2.jpg"
     },
     {
       "name": "Visiting Cards",
       "description": "Professional visiting card design and printing.",
-      "image": ""
+      "image": "/assets/uploads/raised-spot-uv-business-card.jpg"
     },
     {
       "name": "Brochures & Pamphlets",
       "description": "Creative brochures and pamphlets for business promotion.",
-      "image": ""
+      "image": "/assets/uploads/trifold-brochure-tourism-vacation-packages_23-2151989378.avif"
     },
     {
       "name": "Banners & Posters",
       "description": "Attractive banners and posters for advertising.",
-      "image": ""
+      "image": "/assets/uploads/collection-web-banners-different-sizes-for-mobile-and-social-networks-poster-shopping-ads-and-marketing-material-vector.jpg"
     },
     {
       "name": "Custom Printing",
       "description": "Customized printing solutions for all business needs.",
-      "image": ""
+      "image": "/assets/uploads/custom-printing-service.jpeg"
     }
   ]
 }
