@@ -3,7 +3,15 @@
     {
       "name": "Packaging Boxes",
       "description": "Premium customized packaging boxes for your brand.",
-      "image": "/assets/uploads/WhatsApp Image 2026-10-10 at 19.39.55 (1).jpeg"
+      "image": "/assets/uploads/WhatsApp Image 2026-10-10 at 19.39.55 (1).jpeg",
+      "gallery": [
+        "/assets/uploads/White_London_Mockup.png",
+        "/assets/uploads/Vital_Glow_Mockup.png",
+        "/assets/uploads/Timeless_Elegance_Mockup.png",
+        "/assets/uploads/Sumul_Sweets_Mockup.png",
+        "/assets/uploads/Silveria_Mockup.png",
+        "/assets/uploads/Aster_Organics_Mockup.png"
+      ]
     },
     {
       "name": "Labels & Stickers",
