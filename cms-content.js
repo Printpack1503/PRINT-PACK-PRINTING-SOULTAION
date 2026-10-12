@@ -37,3 +37,50 @@ if (!Array.isArray(products)) return;
   }
  }catch(e){console.warn('Products could not be loaded:',e)}
 })();
+
+ // Load Services from Pages CMS
+ try {
+  const data = await get('data/services.json');
+  const services = data.services;
+  const grid = document.querySelector('#services .service-grid');
+
+  if (grid && Array.isArray(services) && services.length) {
+   const cards = [...grid.querySelectorAll('.service-card')];
+
+   services.slice(0, cards.length).forEach((service, index) => {
+    if (!service) return;
+
+    const card = cards[index];
+    const name = card.querySelector('h3');
+    const description = card.querySelector('p');
+    const art = card.querySelector('.service-art');
+
+    if (name && typeof service.name === 'string') {
+     name.textContent = service.name;
+    }
+
+    if (description && typeof service.description === 'string') {
+     description.textContent = service.description;
+    }
+
+    if (art && typeof service.image === 'string' && service.image.trim()) {
+     const imagePath = service.image.trim();
+
+     if (!/^\s*(javascript:|data:)/i.test(imagePath)) {
+      const img = document.createElement('img');
+      img.src = imagePath;
+      img.alt = service.name || 'Printing service';
+      img.loading = 'lazy';
+      img.style.width = '100%';
+      img.style.height = '100%';
+      img.style.objectFit = 'cover';
+      img.style.display = 'block';
+
+      art.replaceChildren(img);
+     }
+    }
+   });
+  }
+ } catch (e) {
+  console.warn('Services could not be loaded:', e);
+ }
