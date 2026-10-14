@@ -185,3 +185,94 @@ if (!Array.isArray(products)) return;
     console.warn('Service gallery could not load:', error);
   }
 })();
+
+/* Automatic Products Photo Slider */
+(function () {
+  const gallery = document.getElementById('product-gallery');
+  if (!gallery) return;
+
+  const style = document.createElement('style');
+  style.textContent = `
+    #product-gallery {
+      display: flex !important;
+      overflow-x: auto;
+      scroll-snap-type: x mandatory;
+      scroll-behavior: smooth;
+      gap: 20px;
+      scrollbar-width: none;
+    }
+    #product-gallery::-webkit-scrollbar {
+      display: none;
+    }
+    #product-gallery > .product-card {
+      flex: 0 0 calc(33.333% - 14px);
+      scroll-snap-align: start;
+      box-sizing: border-box;
+    }
+    @media (max-width: 768px) {
+      #product-gallery > .product-card {
+        flex: 0 0 85%;
+      }
+    }
+    .product-slider-controls {
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      margin-top: 25px;
+    }
+    .product-slider-controls button {
+      background: #081322;
+      color: white;
+      border: 1px solid #d4af37;
+      border-radius: 50%;
+      width: 46px;
+      height: 46px;
+      font-size: 24px;
+      cursor: pointer;
+    }
+  `;
+  document.head.appendChild(style);
+
+  const controls = document.createElement('div');
+  controls.className = 'product-slider-controls';
+  controls.innerHTML = `
+    <button type="button" aria-label="Previous product">&#10094;</button>
+    <button type="button" aria-label="Next product">&#10095;</button>
+  `;
+  gallery.after(controls);
+
+  function move(direction) {
+    const card = gallery.querySelector('.product-card');
+    if (!card) return;
+    const gap = parseFloat(getComputedStyle(gallery).gap) || 0;
+    const distance = card.getBoundingClientRect().width + gap;
+    const end = gallery.scrollWidth - gallery.clientWidth;
+
+    if (direction > 0 && gallery.scrollLeft >= end - 5) {
+      gallery.scrollTo({ left: 0, behavior: 'smooth' });
+    } else if (direction < 0 && gallery.scrollLeft <= 5) {
+      gallery.scrollTo({ left: end, behavior: 'smooth' });
+    } else {
+      gallery.scrollBy({ left: direction * distance, behavior: 'smooth' });
+    }
+  }
+
+  controls.children[0].addEventListener('click', () => move(-1));
+  controls.children[1].addEventListener('click', () => move(1));
+
+  let timer;
+  function start() {
+    clearInterval(timer);
+    timer = setInterval(() => {
+      if (gallery.querySelectorAll('.product-card').length > 1) {
+        move(1);
+      }
+    }, 3500);
+  }
+
+  gallery.addEventListener('mouseenter', () => clearInterval(timer));
+  gallery.addEventListener('mouseleave', start);
+  gallery.addEventListener('focusin', () => clearInterval(timer));
+  gallery.addEventListener('focusout', start);
+  start();
+})();
