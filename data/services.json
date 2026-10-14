@@ -3,40 +3,40 @@
     {
       "name": "Packaging Boxes",
       "description": "Premium customized packaging boxes for your brand.",
-      "image": "/assets/uploads/WhatsApp Image 2026-10-10 at 19.39.55 (1).jpeg",
+      "image": "assets/uploads/WhatsApp Image 2026-10-10 at 19.39.55 (1).jpeg",
       "gallery": [
-        "/assets/uploads/White_London_Mockup.png",
-        "/assets/uploads/Vital_Glow_Mockup.png",
-        "/assets/uploads/Timeless_Elegance_Mockup.png",
-        "/assets/uploads/Sumul_Sweets_Mockup.png",
-        "/assets/uploads/Silveria_Mockup.png",
-        "/assets/uploads/Aster_Organics_Mockup.png"
+        "assets/uploads/White_London_Mockup.png",
+        "assets/uploads/Vital_Glow_Mockup.png",
+        "assets/uploads/Timeless_Elegance_Mockup.png",
+        "assets/uploads/Sumul_Sweets_Mockup.png",
+        "assets/uploads/Silveria_Mockup.png",
+        "assets/uploads/Aster_Organics_Mockup.png"
       ]
     },
     {
       "name": "Labels & Stickers",
       "description": "High-quality custom labels and stickers for all products.",
-      "image": "/assets/uploads/Sticker-Pages-03_720-2.jpg"
+      "image": "assets/uploads/Sticker-Pages-03_720-2.jpg"
     },
     {
       "name": "Visiting Cards",
       "description": "Professional visiting card design and printing.",
-      "image": "/assets/uploads/raised-spot-uv-business-card.jpg"
+      "image": "assets/uploads/raised-spot-uv-business-card.jpg"
     },
     {
       "name": "Brochures & Pamphlets",
       "description": "Creative brochures and pamphlets for business promotion.",
-      "image": "/assets/uploads/trifold-brochure-tourism-vacation-packages_23-2151989378.avif"
+      "image": "assets/uploads/trifold-brochure-tourism-vacation-packages_23-2151989378.avif"
     },
     {
       "name": "Banners & Posters",
       "description": "Attractive banners and posters for advertising.",
-      "image": "/assets/uploads/collection-web-banners-different-sizes-for-mobile-and-social-networks-poster-shopping-ads-and-marketing-material-vector.jpg"
+      "image": "assets/uploads/collection-web-banners-different-sizes-for-mobile-and-social-networks-poster-shopping-ads-and-marketing-material-vector.jpg"
     },
     {
       "name": "Custom Printing",
       "description": "Customized printing solutions for all business needs.",
-      "image": "/assets/uploads/custom-printing-service.jpeg"
+      "image": "assets/uploads/custom-printing-service.jpeg"
     }
   ]
 }
